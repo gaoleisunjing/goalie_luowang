@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:fresco="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 导航栏 -->
+        <RelativeLayout
+            android:id="@+id/layout_detail_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff">
+
+            <ImageView
+                android:id="@+id/iv_detail_top_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/top_bar_back"/>
+
+
+            <ImageView
+                android:id="@+id/iv_detail_top_fav"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/iv_detail_top_back"
+                android:src="@drawable/bar_fav_off"/>
+
+            <ImageView
+                android:id="@+id/iv_detail_top_share"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_detail_top_fav"
+                android:src="@drawable/bar_share_off"/>
+
+            <TextView
+                android:id="@+id/tv_detail_top_comment"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/comment_bg"
+                android:gravity="center"
+                android:text="3评论"
+                android:textSize="12sp"
+                android:textColor="#DD5862"/>
+
+        </RelativeLayout>
+        <!-- 内容部分 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/fresco"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    fresco:placeholderImage="@drawable/ic_launcher"/>
+
+                <ImageView
+                    android:id="@+id/iv_play_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/fresco"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/single_song_play"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fresco"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/iv_play_btn"
+                    android:gravity="top"
+                    android:text="name"
+                    android:textColor="#000"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_detail_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/iv_play_btn"
+                    android:text="vol."
+                    android:textColor="#DD5862"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_play_btn"
+                    android:layout_marginTop="10dp"
+                    android:text="#流行,摇滚"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_detail_tag"
+                    android:layout_marginTop="20dp"
+                    android:text="content"
+                    android:textColor="#000"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+
+                    android:id="@+id/layout_detail_thanks"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tv_detail_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#E0E0E0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon1"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon2"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon3"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon4"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon5"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon6"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon7"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/fresco_detail_usericon8"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/user_icon"
+                        fresco:roundAsCircle="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail_thanks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="21感谢"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/thank_user_more"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_detail_songs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/layout_detail_thanks"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_detail_songnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="11首"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail_downall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:drawableLeft="@drawable/player_dialog_download_off"
+                        android:gravity="center"
+                        android:text="全部缓存"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lv_detail"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_detail_songs">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_detail_relative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lv_detail"
+                    android:text="相似期刊"
+                    android:textColor="#DD5862"
+                    android:textSize="19sp"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_detail_bottom1"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/tv_detail_relative"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_detail_relative1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="#EBEBEB"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/fresco_detail_relative1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/tv_detail_relative1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="vol.97那就这样吧"
+                            android:textColor="#000"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_detail_relative2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#EBEBEB"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/fresco_detail_relative2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/tv_detail_relative2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="vol.97那就这样吧"
+                            android:textColor="#000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/layout_detail_bottom1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_detail_relative3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="#EBEBEB"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/fresco_detail_relative3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/tv_detail_relative3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="vol.97那就这样吧"
+                            android:textColor="#000"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_detail_relative4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#EBEBEB"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/fresco_detail_relative4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/tv_detail_relative4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="vol.97那就这样吧"
+                            android:textColor="#000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

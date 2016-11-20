@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/forum_item_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/forum_item_userMg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/forum_item_userIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    fresco:placeholderImage="@drawable/ic_launcher"
+                    fresco:roundAsCircle="true"/>
+
+
+                <TextView
+                    android:id="@+id/forum_item_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/forum_item_userIcon"
+                    android:text="用户名"
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/comm_more"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/forum_item_divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/forum_item_userMg"
+                android:layout_marginLeft="10dp"
+                android:background="#e9ecf1"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forum_item_userMg"
+                android:layout_margin="10dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/forum_item_art_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop"
+                    fresco:placeholderImage="@drawable/ic_launcher"/>
+
+                <TextView
+                    android:id="@+id/forum_item_art_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forum_item_art_iv"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="6"
+                    android:text="这是一个\n凄凉的\n故事\nname\njjjj\naaaa\nkkkkk"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/forum_item_art_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forum_item_art_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="更多"
+                    android:textSize="10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/forum_item_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forum_item_art_more"
+                    android:background="#EEEFF1">
+
+                    <FrameLayout
+                        android:id="@+id/forum_item_music_frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/forum_item_music_cover"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            fresco:placeholderImage="@drawable/ic_launcher"
+                            />
+
+                        <ImageView
+                            android:id="@+id/forum_item_music_icon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/recommend_play_n"/>
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/forum_item_music_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/forum_item_music_frame"
+                        android:text="如果你要回来请告诉我具体时间"/>
+
+                    <TextView
+                        android:id="@+id/forum_item_music_auther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/forum_item_music_name"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toRightOf="@id/forum_item_music_frame"
+                        android:gravity="bottom"
+                        android:text="慕斯小普"
+                        android:textSize="11dp"/>
+
+                    <TextView
+                        android:id="@+id/forum_item_music_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:text="3首"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/forum_item_music">
+
+                    <TextView
+                        android:id="@+id/forum_item_bt"
+                        style="@style/itemSmallText"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="30dp"
+                        android:text="7"/>
+
+                    <TextView
+                        android:id="@+id/forum_item_bts"
+                        style="@style/itemSmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/forum_item_bt"
+                        android:text="小时前"/>
+
+                    <TextView
+                        android:id="@+id/forum_item_btUpdate"
+                        style="@style/itemSmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/forum_item_bts"
+                        android:text="更新"/>
+
+                    <TextView
+                        android:id="@+id/forum_item_btvote"
+                        style="@style/itemSmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="80dp"
+                        android:text="15"/>
+
+                    <ImageView
+                        android:id="@+id/forum_item_ivzan"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="92dp"
+                        android:src="@drawable/commet_zan_n"
+                        />
+
+                    <TextView
+                        android:id="@+id/forum_item_btcommet"
+                        style="@style/itemSmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:text="15"/>
+
+                    <ImageView
+                        android:id="@+id/forum_item_ivcommet"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="52dp"
+                        android:src="@drawable/commet_com_n"
+                        />
+
+                    <ImageView
+                        android:id="@+id/forum_item_ivshare"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="7dp"
+                        android:src="@drawable/bar_share_off"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+</RelativeLayout>

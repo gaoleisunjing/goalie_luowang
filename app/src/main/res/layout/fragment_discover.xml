@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 导航栏 -->
+        <RelativeLayout
+            android:id="@+id/layout_discover_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff">
+
+            <ImageView
+                android:id="@+id/iv_discover_title_user"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/tab_mine_normal"
+                android:background="@drawable/item_user_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:text="发现"
+                android:textColor="#DD5862"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/iv_discover_title_search"
+                android:layout_width="28sp"
+                android:layout_height="28sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/find_search_bar_icon_normal"/>
+        </RelativeLayout>
+        <!-- 内容部分 -->
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/layout_discover_swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 待定 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_discover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_discover_nonenetwork"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_discover_interneterror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/nonetwork">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_discover_neterror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_discover_interneterror"
+            android:layout_centerHorizontal="true"
+            android:text="网络请求失败,请稍后重试"
+            android:textColor="#000"/>
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_discover_neterror"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/refresh_btn_selector"
+            android:text="刷新"/>
+    </RelativeLayout>
+</FrameLayout>

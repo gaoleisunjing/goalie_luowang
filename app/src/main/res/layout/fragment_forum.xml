@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/forum_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <RadioGroup
+            android:layout_width="180dp"
+            android:id="@+id/forum_RB_navigation"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:textColor="#E26F79"
+            >
+
+            <RadioButton
+                android:id="@+id/forum_RB_attention"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:textSize="18sp"
+                android:button="@null"
+                android:gravity="center"
+                android:text="关注"
+                android:textColor="@drawable/forum_rb_text"/>
+
+            <RadioButton
+                android:id="@+id/forum_RB_hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="热门"
+                android:checked="true"
+                android:textColor="@drawable/forum_rb_text"/>
+
+            <RadioButton
+                android:id="@+id/forum_RB_newest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="最新"
+                android:textColor="@drawable/forum_rb_text"/>
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_forum_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            android:layout_marginRight="20dp"
+            android:src="@drawable/add_forum_content"/>
+    </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/forum_frgment_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
+
+</LinearLayout>

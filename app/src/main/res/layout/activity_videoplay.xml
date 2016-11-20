@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <!-- 导航栏 -->
+    <RelativeLayout
+        android:id="@+id/layout_videoplay_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/iv_videoplay_top_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/top_bar_back"/>
+
+        <ImageView
+            android:id="@+id/iv_videoplay_top_share"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_videoplay_top_back"
+            android:src="@drawable/bar_share_off"/>
+
+        <TextView
+            android:id="@+id/tv_videoplay_top_comment"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/comment_bg"
+            android:gravity="center"
+            android:text="3评论"
+            android:textColor="#DD5862"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_video"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/layout_videoplay_navigation">
+
+        <VideoView
+            android:id="@+id/vv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/fresco_videoplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:id="@+id/view_video_alpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44000000"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_videoplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/player_play_n"/>
+
+            <TextView
+                android:id="@+id/tv_videoplay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_videoplay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="4:08"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_video">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_videoplay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:text="Bad Blood"
+                android:textColor="#000"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tv_videoplay_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_videoplay_name"
+                android:layout_marginLeft="10dp"
+                android:text="Elenore"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_videoplay_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_videoplay_artist"
+                android:layout_marginTop="15dp"
+                android:text="MV频道 2016-09-23"/>
+
+            <TextView
+                android:id="@+id/tv_videoplay_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_videoplay_date"
+                android:layout_margin="15dp"
+                android:text="我是内容"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

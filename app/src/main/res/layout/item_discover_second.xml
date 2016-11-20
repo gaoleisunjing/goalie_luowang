@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_height="190dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_seconditem_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <FrameLayout
+                android:id="@+id/flleft"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/fresco_seconditem_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fresco:placeholderImage="@drawable/ic_launcher"/>
+
+                <ImageView
+                    android:id="@+id/iv_seconditem_leftplaybtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/recommend_play_n"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_seconditem_left_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/flleft"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="为战而生 为战而死"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/tv_seconditem_left_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_seconditem_left_name"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="生缘故"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_seconditem_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <FrameLayout
+                android:id="@+id/flright"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/fresco_seconditem_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fresco:placeholderImage="@drawable/ic_launcher"/>
+
+                <ImageView
+                    android:id="@+id/iv_seconditem_rightplaybtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/recommend_play_n"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_seconditem_right_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/flright"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="马戏团里的疯女人"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/tv_seconditem_right_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_seconditem_right_name"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="老板娘与酒客"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

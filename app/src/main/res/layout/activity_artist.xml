@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layout_artist_tab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#1978ca"
+        android:alpha="0.5"
+        >
+
+        <ImageView
+            android:id="@+id/iv_artist_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/top_bar_back"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/player_more"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#1978ca"
+        android:alpha="0.5"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/item_user_icon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="每天往黑暗里偷偷投一块石子。"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginTop="95dp"/>
+    </RelativeLayout>
+</LinearLayout>

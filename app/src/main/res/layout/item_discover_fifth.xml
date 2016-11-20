@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/layout_fifthitem_root"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true">
+
+    <FrameLayout
+        android:id="@+id/fl_fifthitem"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/fresco_fifthitem"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            fresco:placeholderImage="@drawable/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/iv_fifthitem_playbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/recommend_play_n"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_fifthitem_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_fifthitem"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="给三具备，网友有好睡眠。"
+        android:textColor="#000"
+        android:textSize="13sp"/>
+
+    <RelativeLayout
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/tv_fifthitem_username"
+        android:layout_toLeftOf="@+id/tv_fifthitem_username">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/fresco_firitem_usericon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:roundAsCircle="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_fifthitem_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_fifthitem_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:text="弹积极 分享1首歌"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@id/tv_fifthitem_username"/>
+</RelativeLayout>

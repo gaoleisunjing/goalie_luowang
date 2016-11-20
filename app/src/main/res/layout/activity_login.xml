@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/left_login_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/dialog_exit"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/left_login_userBg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/left_login_back"
+        android:layout_centerHorizontal="true"
+        fresco:placeholderImage="@drawable/ic_launcher"/>
+
+    <RelativeLayout
+        android:id="@+id/left_login_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_login_userBg"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        >
+
+        <EditText
+            android:id="@+id/left_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="邮箱"/>
+
+        <EditText
+            android:id="@+id/left_user_pw"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/left_user_email"
+            android:hint="密码"/>
+
+        <TextView
+            android:id="@+id/left_login_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/left_user_pw"
+            android:layout_marginTop="10dp"
+            android:background="#8b8b84"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/left_login_login">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="找回密码"
+                android:id="@+id/left_login_findpw"
+                android:textColor="@color/colorTxtSelected"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/left_login_fast_register"
+                android:text="快速注册"
+                android:textColor="@color/colorTxtSelected"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_width="0dp"
+            android:id="@+id/left_logo_wechat"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/logo_wechat"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/left_logo_qq"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/logo_qq"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/left_logo_sinaweibo"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/logo_sinaweibo"
+            android:layout_height="30dp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/left_logo_douban"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/logo_douban"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

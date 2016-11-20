@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/tv_detail_list_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:text="01"
+        android:textColor="#000"
+        android:textSize="16sp"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/fresco_detail_list"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_detail_list_num"/>
+
+    <TextView
+        android:id="@+id/tv_detail_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/fresco_detail_list"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/fresco_detail_list"
+        android:text="九月之歌"
+        android:textColor="#000"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_detail_list_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/fresco_detail_list"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/fresco_detail_list"
+        android:gravity="bottom"
+        android:singleLine="true"
+        android:text="DJ 何西"
+        android:textSize="14sp"/>
+
+    <ImageView
+        android:id="@+id/iv_detail_list_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/vol_song_item_more"/>
+
+</RelativeLayout>

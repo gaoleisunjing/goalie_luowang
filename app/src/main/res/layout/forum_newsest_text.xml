@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/forum_newsest_text_userMg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/forum_newsest_text_userIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                fresco:placeholderImage="@drawable/ic_launcher"
+                fresco:roundAsCircle="true"/>
+
+
+            <TextView
+                android:id="@+id/forum_newsest_text_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/forum_newsest_text_userIcon"
+                android:text="用户名"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/comm_more"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/forum_newsest_text_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/forum_newsest_text_userMg"
+            android:layout_marginLeft="10dp"
+            android:background="#e9ecf1"/>
+
+        <TextView
+            android:id="@+id/forum_newsest_onlytext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forum_newsest_text_divider"
+            android:layout_margin="5dp"
+            android:text="111111"
+            android:maxLines="6"
+            android:textColor="#000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forum_newsest_onlytext">
+
+            <TextView
+                android:id="@+id/forum_item_bt"
+                style="@style/itemSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="7"/>
+
+            <TextView
+                android:id="@+id/forum_item_tbts"
+                style="@style/itemSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/forum_item_bt"
+                android:text="小时前"/>
+
+            <TextView
+                android:id="@+id/forum_item_tbtUpdate"
+                style="@style/itemSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/forum_item_tbts"
+                android:text="更新"/>
+
+            <TextView
+                android:id="@+id/forum_item_tbtvote"
+                style="@style/itemSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="80dp"
+                android:text="15"/>
+
+            <ImageView
+                android:id="@+id/forum_item_tivzan"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="92dp"
+                android:src="@drawable/commet_zan_n"
+                />
+
+            <TextView
+                android:id="@+id/forum_item_tbtcommet"
+                style="@style/itemSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:text="15"/>
+
+            <ImageView
+                android:id="@+id/forum_item_tivcommet"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="52dp"
+                android:src="@drawable/commet_com_n"
+                />
+
+            <ImageView
+                android:id="@+id/forum_item_tivshare"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/bar_share_off"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

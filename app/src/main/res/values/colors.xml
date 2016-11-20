@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTxtSelected">#DD5862</color>
+    <color name="colorTxtNormal">#000</color>
+    <color name="colorbtnNormal">#DD5862</color>
+    <color name="colorbtnpress">#B70606</color>
+    <color name="colortxtbacsmall">#B9B9B9</color>
+    <color name="dark_gray">#E6E6E6</color>
+    <color name="colortxtbacBig">#fff</color>
+    <color name="regNormal">#8b8b84</color>
+    <color name="regPress">#FFE21313</color>
+
+</resources>

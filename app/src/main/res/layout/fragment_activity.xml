@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/actradio"
+        android:background="#fff">
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="40dp"
+                android:text="北京"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/top_drop_n"/>
+        </LinearLayout>
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/actradiogroupId"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="活动"
+                android:gravity="center"
+                android:button="@null"
+                android:paddingLeft="40dp"
+                android:id="@+id/actradiobutton1"
+                android:textColor="#f00"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingRight="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:button="@null"
+                android:id="@+id/actradiobutton2"
+                android:text="场所"/>
+        </RadioGroup>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:id="@+id/actviewpagerId"/>
+</LinearLayout>
